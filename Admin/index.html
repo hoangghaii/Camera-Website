@@ -139,7 +139,7 @@
 			<div class="content">
 				<nav class="sidebar">
 					<ul class="side-nav">
-						<li class="side-nav__item">
+						<li class="side-nav__item side-nav__item--active">
 							<a href="javascript:void(0)" class="side-nav__link">
 								<i class="fal fa-tasks side-nav__icon"></i>
 								<span class="side-nav__heading">
@@ -157,14 +157,6 @@
 								</span>
 							</a>
 						</li>
-						<li class="side-nav__item side-nav__item--active">
-							<a href="javascript:void(0)" class="side-nav__link">
-								<i class="fal fa-filter side-nav__icon"></i>
-								<span class="side-nav__heading">
-									Quản lý bộ lọc
-								</span>
-							</a>
-						</li>
 					</ul>
 					<div class="legal">
 						&copy; 2021 by hhaai. All rights reserved.
@@ -172,115 +164,380 @@
 				</nav>
 
 				<main class="main">
-					<section class="filter">
-						<div class="filter__heading">
+					<section class="product">
+						<div class="product__heading">
 							<span
-								class="filter__heading--item filter__heading--item-active"
-								data-id="filter-1"
+								class="product__heading--item product__heading--item-active"
+								data-id="product"
 							>
-								Thêm loại bộ lọc
+								<i class="fal fa-camera-retro"></i>
+								<span>Sản phẩm</span>
 							</span>
 
 							<span
-								class="filter__heading--item"
-								data-id="filter-2"
+								class="product__heading--item"
+								data-id="filter"
 							>
-								Thêm bộ lọc
+								<i class="fal fa-filter"></i>
+								<span>Bộ lọc</span>
 							</span>
 						</div>
 
 						<div
-							class="filter-content filter--active"
-							id="filter-1"
+							class="product-content product--active"
+							id="product"
 						>
-							<h3 class="heading-3">Thêm loại bộ lọc</h3>
+							<div class="product-content-1">
+								<div class="heading-group">
+									<h3 class="heading-3">
+										Danh sách loại sản phẩm
+									</h3>
 
-							<form action="#0" class="form">
-								<div class="form__group filter-form">
-									<label
-										for="filterType-1"
-										class="form__label"
+									<span
+										class="plus-icon open-add-modal"
+										data-add-modal="add-modal"
+										data-modal="modal"
 									>
-										Tên loại:<span>(*)</span>
-									</label>
-									<input
-										type="text"
-										id="filterType-1"
-										class="form__input"
-										required
-									/>
+										<i class="fal fa-plus"></i>
+									</span>
 								</div>
 
-								<div class="form__group filter-form">
-									<label for="textArea-1" class="form__label">
-										Ghi chú:
-									</label>
-									<textarea
-										name=""
-										id="textArea-1"
-										cols="30"
-										rows="5"
-										class="form__area"
-									></textarea>
-								</div>
+								<ul class="product-type">
+									<li class="product-type__item">
+										<span class="product-type__name">
+											Loại 1
+										</span>
+										<span class="times-icon">
+											<i class="fal fa-times"></i>
+										</span>
+									</li>
 
-								<button class="btn btn-add filter-btn">
-									Thêm
-								</button>
-							</form>
-						</div>
+									<li class="product-type__item">
+										<span class="product-type__name">
+											Loại 2
+										</span>
+										<span class="times-icon">
+											<i class="fal fa-times"></i>
+										</span>
+									</li>
 
-						<div class="filter-content" id="filter-2">
-							<h3 class="heading-3">Thêm bộ lọc</h3>
+									<li class="product-type__item">
+										<span class="product-type__name">
+											Loại 3
+										</span>
+										<span class="times-icon">
+											<i class="fal fa-times"></i>
+										</span>
+									</li>
+								</ul>
+							</div>
 
-							<form action="#0" class="form">
-								<div class="form__group filter-form">
-									<label
-										for="filterType-2"
-										class="form__label"
+							<div class="product-content-2">
+								<div class="heading-group">
+									<h3 class="heading-3">
+										Danh sách sản phẩm
+									</h3>
+
+									<span
+										class="plus-icon open-product-modal"
+										data-product-modal="product-modal"
+										data-modal="modal"
 									>
-										Loại bộ lọc:<span>(*)</span>
-									</label>
-									<input
-										type="text"
-										id="filterType-2"
-										class="form__input"
-										required
-									/>
+										<i class="fal fa-plus"></i>
+									</span>
 								</div>
 
-								<div class="form__group filter-form">
-									<label for="filter" class="form__label">
-										Tên bộ lọc:<span>(*)</span>
-									</label>
-									<input
-										type="text"
-										id="filter"
-										class="form__input"
-										required
-									/>
+								<div class="table">
+									<div class="table-header">
+										<div class="table-heading__list">
+											<span class="table-heading__item">
+												STT
+											</span>
+											<span class="table-heading__item">
+												Tên sản phẩm
+											</span>
+											<span class="table-heading__item">
+												Giá (đ)
+											</span>
+											<span class="table-heading__item">
+												Loại sản phẩm
+											</span>
+											<span class="table-heading__item">
+												Ngày tạo
+											</span>
+											<span class="table-heading__item">
+												Hành động
+											</span>
+										</div>
+									</div>
+									<div class="table-body">
+										<div class="table-content__list">
+											<span class="table-content__item">
+												1
+											</span>
+											<span class="table-content__item">
+												<a
+													href="#0"
+													class="table-content__link"
+												>
+													Sản phẩm 1
+												</a>
+											</span>
+											<span class="table-content__item">
+												1.000.000
+											</span>
+											<span class="table-content__item">
+												Loại 1
+											</span>
+											<span class="table-content__item">
+												21/12/2021
+											</span>
+											<span class="table-content__item">
+												<span
+													class="times-icon times-icon-2"
+												>
+													<i class="fal fa-times"></i>
+												</span>
+											</span>
+										</div>
+
+										<div class="table-content__list">
+											<span class="table-content__item">
+												1
+											</span>
+											<span class="table-content__item">
+												<a
+													href="#0"
+													class="table-content__link"
+												>
+													Sản phẩm 1
+												</a>
+											</span>
+											<span class="table-content__item">
+												1.000.000
+											</span>
+											<span class="table-content__item">
+												Loại 1
+											</span>
+											<span class="table-content__item">
+												21/12/2021
+											</span>
+											<span class="table-content__item">
+												<span
+													class="times-icon times-icon-2"
+												>
+													<i class="fal fa-times"></i>
+												</span>
+											</span>
+										</div>
+
+										<div class="table-content__list">
+											<span class="table-content__item">
+												1
+											</span>
+											<span class="table-content__item">
+												<a
+													href="#0"
+													class="table-content__link"
+												>
+													Sản phẩm 1
+												</a>
+											</span>
+											<span class="table-content__item">
+												1.000.000
+											</span>
+											<span class="table-content__item">
+												Loại 1
+											</span>
+											<span class="table-content__item">
+												21/12/2021
+											</span>
+											<span class="table-content__item">
+												<span
+													class="times-icon times-icon-2"
+												>
+													<i class="fal fa-times"></i>
+												</span>
+											</span>
+										</div>
+									</div>
 								</div>
 
-								<div class="form__group filter-form">
-									<label for="textArea-2" class="form__label">
-										Ghi chú
-									</label>
-									<textarea
-										name=""
-										id="textArea-2"
-										cols="30"
-										rows="5"
-										class="form__area"
-									></textarea>
+								<div class="pagination">
+									<ul class="pagination__list">
+										<li
+											class="pagination__item pagination__item--active"
+										>
+											<a
+												href="#"
+												class="pagination__link"
+											>
+												1
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a
+												href="#"
+												class="pagination__link"
+											>
+												2
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a
+												href="#"
+												class="pagination__link"
+											>
+												3
+											</a>
+										</li>
+										<li class="pagination__item">
+											<a
+												href="#"
+												class="pagination__link"
+											>
+												4
+											</a>
+										</li>
+									</ul>
 								</div>
-
-								<button class="btn btn-add filter-btn">
-									Thêm
-								</button>
-							</form>
+							</div>
 						</div>
 					</section>
 				</main>
+			</div>
+		</div>
+
+		<div class="modal hide" id="modal">
+			<div class="add-modal hide" id="add-modal">
+				<span class="times-icon close-modal">
+					<i class="fal fa-times"></i>
+				</span>
+
+				<h4 class="heading-4">Thêm loại sản phẩm</h4>
+
+				<form action="#0" class="form">
+					<div class="form__group">
+						<label for="add-1" class="form__label">
+							Tên loại:<span>(*)</span>
+						</label>
+						<input
+							type="text"
+							id="add-1"
+							class="form__input"
+							required
+						/>
+					</div>
+
+					<div class="form__group">
+						<label for="textArea-1" class="form__label">
+							Ghi chú:
+						</label>
+						<textarea
+							name=""
+							id="textArea-1"
+							cols="30"
+							rows="3"
+							class="form__area"
+						></textarea>
+					</div>
+
+					<button class="btn btn-add">Thêm</button>
+				</form>
+			</div>
+
+			<div class="add-product-modal hide" id="product-modal">
+				<span class="times-icon close-modal">
+					<i class="fal fa-times"></i>
+				</span>
+
+				<h4 class="heading-4">Thêm sản phẩm</h4>
+
+				<form action="#0" class="form">
+					<div class="form__group-big">
+						<div class="form__group">
+							<label for="productCode" class="form__label">
+								Mã sản phẩm:
+							</label>
+							<input
+								type="text"
+								id="productCode"
+								class="form__input"
+							/>
+						</div>
+
+						<div class="form__group">
+							<label for="productType" class="form__label">
+								Loại sản phẩm:<span>(*)</span>
+							</label>
+							<input
+								type="text"
+								id="productType"
+								class="form__input"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="form__group-big">
+						<div class="form__group">
+							<label for="productName" class="form__label">
+								Tên sản phẩm:<span>(*)</span>
+							</label>
+							<input
+								type="text"
+								id="productName"
+								class="form__input"
+								required
+							/>
+						</div>
+
+						<div class="form__group">
+							<label for="productPrice" class="form__label">
+								Giá sản phẩm:<span>(*)</span>
+							</label>
+							<input
+								type="text"
+								id="productPrice"
+								class="form__input"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="form__group">
+						<label class="form__label"> Ghi chú: </label>
+						<textarea
+							name=""
+							cols="30"
+							rows="3"
+							class="form__area"
+						></textarea>
+					</div>
+
+					<div class="form__group">
+						<label class="form__label">
+							Hình ảnh:<span>(*)</span>
+						</label>
+						<div class="form__group-file">
+							<span class="form__input--heading">
+								Chọn ảnh (100x100)
+							</span>
+							<input
+								type="file"
+								class="form__input-file"
+								accept="image/*"
+								required
+							/>
+						</div>
+					</div>
+					<div class="file-placeholder"></div>
+
+					<div class="btn-group">
+						<button class="btn btn-cancel">Hủy</button>
+						<button class="btn btn-add">Thêm</button>
+					</div>
+				</form>
 			</div>
 		</div>
 		<script src="./js/main.js"></script>

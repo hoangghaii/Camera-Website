@@ -25,3 +25,31 @@ filterBtn.forEach((item) => {
 			.classList.add("filter--active");
 	});
 });
+
+const openAddModal = document.querySelector(".open-add-modal");
+openAddModal.addEventListener("click", function () {
+	document.querySelector(`#${this.dataset.modal}`).classList.remove("hide");
+	document
+		.querySelector(`#${this.dataset.addModal}`)
+		.classList.remove("hide");
+});
+
+const openProductModal = document.querySelector(".open-product-modal");
+openProductModal.addEventListener("click", function () {
+	document.querySelector(`#${this.dataset.modal}`).classList.remove("hide");
+	document
+		.querySelector(`#${this.dataset.productModal}`)
+		.classList.remove("hide");
+});
+
+const closeBtn = document.querySelector(".close-modal");
+const parentCloseBtn = closeBtn.parentElement;
+const modal = parentCloseBtn.parentElement;
+modal.addEventListener("click", function () {
+	modal.classList.add("hide");
+	parentCloseBtn.classList.add("hide");
+});
+closeBtn.addEventListener("click", function () {
+	modal.classList.add("hide");
+	parentCloseBtn.classList.add("hide");
+});
