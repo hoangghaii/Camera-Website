@@ -10,15 +10,15 @@
 		&:not(:last-child) {
 			margin-bottom: 2rem;
 		}
-	}
 
-	.form__group-big {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		&-big {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-		&:not(:last-child) {
-			margin-bottom: 2rem;
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 
@@ -58,6 +58,16 @@
 		border: 1px solid $color-grey-light-4;
 
 		padding: 1rem 1.5rem;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__select {
+		padding: 0.8rem 3.3rem;
+		border: 1px solid $color-grey-light-4;
+		border-radius: 1.1rem;
 
 		&:focus {
 			outline: none;

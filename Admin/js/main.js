@@ -1,13 +1,7 @@
 "use strict";
 
 const filterBtn = document.querySelectorAll(".filter__heading--item");
-
 const filterContent = document.querySelectorAll(".filter-content");
-
-const activeBtn = function (item) {
-	console.log(item.classList);
-};
-
 filterBtn.forEach((item) => {
 	item.addEventListener("click", function () {
 		filterBtn.forEach((ele) => {
@@ -26,30 +20,52 @@ filterBtn.forEach((item) => {
 	});
 });
 
-const openAddModal = document.querySelector(".open-add-modal");
-openAddModal.addEventListener("click", function () {
-	document.querySelector(`#${this.dataset.modal}`).classList.remove("hide");
-	document
-		.querySelector(`#${this.dataset.addModal}`)
-		.classList.remove("hide");
+//** ------------- Functionality Modal ------------- */
+const modal = document.querySelector(".modal");
+
+const openModal = document.querySelectorAll(".open-modal");
+openModal.forEach((item) => {
+	item.addEventListener("click", function () {
+		modal.classList.remove("hide");
+		document
+			.querySelector(`#${this.dataset.modal}`)
+			.classList.remove("hide");
+	});
 });
 
-const openProductModal = document.querySelector(".open-product-modal");
-openProductModal.addEventListener("click", function () {
-	document.querySelector(`#${this.dataset.modal}`).classList.remove("hide");
-	document
-		.querySelector(`#${this.dataset.productModal}`)
-		.classList.remove("hide");
+const closeBtn = document.querySelectorAll(".close-modal");
+closeBtn.forEach((item) => {
+	const parentCloseBtn = item.parentElement;
+	item.addEventListener("click", function () {
+		modal.classList.add("hide");
+		parentCloseBtn.classList.add("hide");
+	});
 });
 
-const closeBtn = document.querySelector(".close-modal");
-const parentCloseBtn = closeBtn.parentElement;
-const modal = parentCloseBtn.parentElement;
-modal.addEventListener("click", function () {
-	modal.classList.add("hide");
-	parentCloseBtn.classList.add("hide");
-});
-closeBtn.addEventListener("click", function () {
-	modal.classList.add("hide");
-	parentCloseBtn.classList.add("hide");
-});
+//** ------------- Functionality Clock ------------- */
+const clockFunction = function () {
+	setInterval(() => {
+		const time = document.querySelector(".clock__display #time");
+		let date = new Date();
+		let hours = date.getHours();
+		let minutes = date.getMinutes();
+		let seconds = date.getSeconds();
+		let day_night = "AM";
+		if (hours > 12) {
+			day_night = "PM";
+			hours = hours - 12;
+		}
+		if (seconds < 10) {
+			seconds = "0" + seconds;
+		}
+		if (minutes < 10) {
+			minutes = "0" + minutes;
+		}
+		if (hours < 10) {
+			hours = "0" + hours;
+		}
+		time.textContent =
+			hours + ":" + minutes + ":" + seconds + " " + day_night;
+	});
+};
+clockFunction();

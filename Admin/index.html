@@ -25,6 +25,12 @@
 					class="header__logo"
 				/>
 
+				<div class="clock">
+					<div class="clock__display">
+						<div id="time"></div>
+					</div>
+				</div>
+
 				<nav class="header__nav">
 					<div class="header__nav-user">
 						<img
@@ -194,9 +200,8 @@
 									</h3>
 
 									<span
-										class="plus-icon open-add-modal"
-										data-add-modal="add-modal"
-										data-modal="modal"
+										class="plus-icon open-modal"
+										data-modal="add-modal"
 									>
 										<i class="fal fa-plus"></i>
 									</span>
@@ -239,9 +244,8 @@
 									</h3>
 
 									<span
-										class="plus-icon open-product-modal"
-										data-product-modal="product-modal"
-										data-modal="modal"
+										class="plus-icon open-modal"
+										data-modal="product-modal"
 									>
 										<i class="fal fa-plus"></i>
 									</span>
@@ -408,7 +412,7 @@
 			</div>
 		</div>
 
-		<div class="modal hide" id="modal">
+		<div class="modal hide">
 			<div class="add-modal hide" id="add-modal">
 				<span class="times-icon close-modal">
 					<i class="fal fa-times"></i>
@@ -418,24 +422,16 @@
 
 				<form action="#0" class="form">
 					<div class="form__group">
-						<label for="add-1" class="form__label">
+						<label class="form__label">
 							Tên loại:<span>(*)</span>
 						</label>
-						<input
-							type="text"
-							id="add-1"
-							class="form__input"
-							required
-						/>
+						<input type="text" class="form__input" required />
 					</div>
 
 					<div class="form__group">
-						<label for="textArea-1" class="form__label">
-							Ghi chú:
-						</label>
+						<label class="form__label"> Ghi chú: </label>
 						<textarea
 							name=""
-							id="textArea-1"
 							cols="30"
 							rows="3"
 							class="form__area"
@@ -456,52 +452,36 @@
 				<form action="#0" class="form">
 					<div class="form__group-big">
 						<div class="form__group">
-							<label for="productCode" class="form__label">
-								Mã sản phẩm:
-							</label>
-							<input
-								type="text"
-								id="productCode"
-								class="form__input"
-							/>
+							<label class="form__label"> Mã sản phẩm: </label>
+							<input type="text" class="form__input" />
 						</div>
 
 						<div class="form__group">
-							<label for="productType" class="form__label">
+							<label class="form__label">
 								Loại sản phẩm:<span>(*)</span>
 							</label>
-							<input
-								type="text"
-								id="productType"
-								class="form__input"
-								required
-							/>
+							<select name="" class="form__select" required>
+								<option value="lsp1">Loại sản phẩm 1</option>
+								<option value="lsp2">Loại sản phẩm 2</option>
+								<option value="lsp3">Loại sản phẩm 3</option>
+								<option value="lsp4">Loại sản phẩm 4</option>
+							</select>
 						</div>
 					</div>
 
 					<div class="form__group-big">
 						<div class="form__group">
-							<label for="productName" class="form__label">
+							<label class="form__label">
 								Tên sản phẩm:<span>(*)</span>
 							</label>
-							<input
-								type="text"
-								id="productName"
-								class="form__input"
-								required
-							/>
+							<input type="text" class="form__input" required />
 						</div>
 
 						<div class="form__group">
-							<label for="productPrice" class="form__label">
+							<label class="form__label">
 								Giá sản phẩm:<span>(*)</span>
 							</label>
-							<input
-								type="text"
-								id="productPrice"
-								class="form__input"
-								required
-							/>
+							<input type="text" class="form__input" required />
 						</div>
 					</div>
 
