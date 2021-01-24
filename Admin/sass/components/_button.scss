@@ -9,6 +9,7 @@
 		padding: 1.5rem 4rem;
 		display: inline-block;
 		cursor: pointer;
+		border-radius: 1rem;
 		transition: all 0.25s;
 
 		position: relative;
@@ -45,15 +46,14 @@
 		padding: 1.3rem 6rem;
 		color: $color-white;
 		background-color: $color-primary;
-		border-radius: 1rem;
 
 		margin-top: 1rem;
 	}
+
 	&-cancel {
 		padding: 1.3rem 6.3rem;
 		color: $color-white;
 		background-color: $color-grey-light-4;
-		border-radius: 1rem;
 
 		margin-top: 1rem;
 
@@ -68,5 +68,24 @@
 			box-shadow: transparent;
 			transform: translateY(0);
 		}
+	}
+
+	&-success {
+		background-color: $color-primary;
+		color: $color-white;
+		font-size: 1.6rem;
+		font-weight: 600;
+	}
+
+	&-login {
+		width: 100%;
+		padding: 1.5rem 3rem;
+		background-color: $color-blue;
+		color: $color-white;
+		font-size: 1.4rem;
+		font-weight: 600;
+		border-radius: 1rem;
+
+		margin: 3rem 0 0;
 	}
 }

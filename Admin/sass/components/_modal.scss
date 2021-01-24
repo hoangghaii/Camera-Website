@@ -67,6 +67,21 @@
 	}
 }
 
+.msg-modal {
+	@extend %absCenter;
+	@extend %modal;
+
+	width: 35rem;
+
+	&__content {
+		color: $color-font;
+		font-size: 1.6rem;
+		word-break: break-word;
+
+		margin-bottom: 1.5rem;
+	}
+}
+
 .close-modal {
 	position: absolute;
 	top: 1rem;

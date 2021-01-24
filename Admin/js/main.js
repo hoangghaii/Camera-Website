@@ -23,27 +23,41 @@ filterBtn.forEach((item) => {
 //** ------------- Functionality Modal ------------- */
 const modal = document.querySelector(".modal");
 
-const openModal = document.querySelectorAll(".open-modal");
-openModal.forEach((item) => {
-	item.addEventListener("click", function () {
-		modal.classList.remove("hide");
-		document
-			.querySelector(`#${this.dataset.modal}`)
-			.classList.remove("hide");
+const fnOpenModal = function (item) {
+	const openModal = document.querySelectorAll(`.${item}`);
+	openModal.forEach((item) => {
+		item.addEventListener("click", function () {
+			modal.classList.remove("hide");
+			document
+				.querySelector(`#${this.dataset.modal}`)
+				.classList.remove("hide");
+		});
 	});
-});
+};
 
-const closeBtn = document.querySelectorAll(".close-modal");
-closeBtn.forEach((item) => {
-	const parentCloseBtn = item.parentElement;
-	item.addEventListener("click", function () {
-		modal.classList.add("hide");
-		parentCloseBtn.classList.add("hide");
+fnOpenModal("plus-icon");
+fnOpenModal("product-type__name");
+fnOpenModal("table-content__link");
+
+const fnCloseBtn = function (item) {
+	const closeBtn = document.querySelectorAll(`.${item}`);
+	closeBtn.forEach((item) => {
+		const parentCloseBtn = item.parentElement;
+		item.addEventListener("click", function () {
+			modal.classList.add("hide");
+			// parentCloseBtn.classList.add("hide");
+			document
+				.querySelector(`#${this.dataset.modal}`)
+				.classList.add("hide");
+		});
 	});
-});
+};
+
+fnCloseBtn("close-modal");
+fnCloseBtn("btn-cancel");
 
 //** ------------- Functionality Clock ------------- */
-const clockFunction = function () {
+const fnClock = function () {
 	setInterval(() => {
 		const time = document.querySelector(".clock__display #time");
 		let date = new Date();
@@ -68,4 +82,4 @@ const clockFunction = function () {
 			hours + ":" + minutes + ":" + seconds + " " + day_night;
 	});
 };
-clockFunction();
+fnClock();

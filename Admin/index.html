@@ -11,410 +11,463 @@
 			type="image/gif"
 			sizes="16x16"
 		/>
-		<meta name="description" content="Camera, Product Camera, ..." />
+		<meta name="quotesription" content="Camera, Product Camera, ..." />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./fontawesome/css/all.min.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<header class="header">
-				<img
-					src="./images/logo.jpg"
-					alt="RongBay logo"
-					class="header__logo"
-				/>
+		<!-- <div class="container">
+			<div class="wrapper">
+				<header class="header">
+					<img
+						src="./images/logo.jpg"
+						alt="RongBay logo"
+						class="header__logo"
+					/>
 
-				<div class="clock">
-					<div class="clock__display">
-						<div id="time"></div>
-					</div>
-				</div>
-
-				<nav class="header__nav">
-					<div class="header__nav-user">
-						<img
-							src="./images/user.jpg"
-							alt="user logo"
-							class="header__nav-user--photo"
-						/>
-						<span class="header__nav-user--name">RongBay</span>
-						<!-- <div class="user-nav__option">
-							<div class="user-nav__option-profile">
-								<img
-									src="img/user.jpg"
-									alt="user logo"
-									class="user-nav__option-profile--photo"
-								/>
-								<span class="user-nav__option-profile--user">
-									<span
-										class="user-nav__option-profile--user-name"
-									>
-										Jonas Schmedtmann
-									</span>
-									<span
-										class="user-nav__option-profile--user-msg"
-									>
-										See your profile
-									</span>
-								</span>
-							</div>
-							<div class="user-nav__option-feedback">
-								<svg class="user-nav__option-feedback--icon">
-									<use
-										xlink:href="img/symbol.svg#icon-help-with-circle"
-									></use>
-								</svg>
-								<span
-									class="user-nav__option-feedback--content"
-								>
-									<span
-										class="user-nav__option-feedback--title"
-									>
-										Comments
-									</span>
-									<span
-										class="user-nav__option-feedback--msg"
-									>
-										Contribute to help us improve
-									</span>
-								</span>
-							</div>
-							<ul class="user-nav__option--list">
-								<li class="user-nav__option--item">
-									<svg class="user-nav__option--icon">
-										<use
-											xlink:href="img/symbol.svg#icon-cog"
-										></use>
-									</svg>
-									<span class="user-nav__option--title">
-										Settings & privacy
-									</span>
-									<svg class="user-nav__option--icon2">
-										<use
-											xlink:href="img/sprite.svg#icon-chevron-thin-right"
-										></use>
-									</svg>
-								</li>
-								<li class="user-nav__option--item">
-									<svg class="user-nav__option--icon">
-										<use
-											xlink:href="img/symbol.svg#icon-ticket"
-										></use>
-									</svg>
-									<span class="user-nav__option--title">
-										Bookings
-									</span>
-									<svg class="user-nav__option--icon2">
-										<use
-											xlink:href="img/sprite.svg#icon-chevron-thin-right"
-										></use>
-									</svg>
-								</li>
-								<li class="user-nav__option--item">
-									<svg class="user-nav__option--icon">
-										<use
-											xlink:href="img/symbol.svg#icon-credit"
-										></use>
-									</svg>
-									<span class="user-nav__option--title">
-										Payment
-									</span>
-									<svg class="user-nav__option--icon2">
-										<use
-											xlink:href="img/sprite.svg#icon-chevron-thin-right"
-										></use>
-									</svg>
-								</li>
-								<li class="user-nav__option--item">
-									<svg class="user-nav__option--icon">
-										<use
-											xlink:href="img/symbol.svg#icon-log-out"
-										></use>
-									</svg>
-									<span class="user-nav__option--title">
-										Logout
-									</span>
-								</li>
-							</ul>
-						</div> -->
-					</div>
-				</nav>
-			</header>
-
-			<div class="content">
-				<nav class="sidebar">
-					<ul class="side-nav">
-						<li class="side-nav__item side-nav__item--active">
-							<a href="javascript:void(0)" class="side-nav__link">
-								<i class="fal fa-tasks side-nav__icon"></i>
-								<span class="side-nav__heading">
-									Quản lý sản phẩm
-								</span>
-							</a>
-						</li>
-						<li class="side-nav__item">
-							<a href="javascript:void(0)" class="side-nav__link">
-								<i
-									class="fal fa-camera-retro side-nav__icon"
-								></i>
-								<span class="side-nav__heading">
-									Thiết lập sản phẩm
-								</span>
-							</a>
-						</li>
-					</ul>
-					<div class="legal">
-						&copy; 2021 by hhaai. All rights reserved.
-					</div>
-				</nav>
-
-				<main class="main">
-					<section class="product">
-						<div class="product__heading">
-							<span
-								class="product__heading--item product__heading--item-active"
-								data-id="product"
-							>
-								<i class="fal fa-camera-retro"></i>
-								<span>Sản phẩm</span>
-							</span>
-
-							<span
-								class="product__heading--item"
-								data-id="filter"
-							>
-								<i class="fal fa-filter"></i>
-								<span>Bộ lọc</span>
-							</span>
+					<div class="clock">
+						<div class="clock__display">
+							<div id="time"></div>
 						</div>
+					</div>
 
-						<div
-							class="product-content product--active"
-							id="product"
-						>
-							<div class="product-content-1">
-								<div class="heading-group">
-									<h3 class="heading-3">
-										Danh sách loại sản phẩm
-									</h3>
+					<nav class="header__nav">
+						<div class="header__nav-user">
+							<img
+								src="./images/user.jpg"
+								alt="user logo"
+								class="header__nav-user--photo"
+							/>
+							<span class="header__nav-user--name">RongBay</span>
+						</div>
+					</nav>
+				</header>
 
-									<span
-										class="plus-icon open-modal"
-										data-modal="add-modal"
-									>
-										<i class="fal fa-plus"></i>
+				<div class="content">
+					<nav class="sidebar">
+						<ul class="side-nav">
+							<li class="side-nav__item side-nav__item--active">
+								<a
+									href="javascript:void(0)"
+									class="side-nav__link"
+								>
+									<i class="fal fa-tasks side-nav__icon"></i>
+									<span class="side-nav__heading">
+										Quản lý sản phẩm
 									</span>
-								</div>
+								</a>
+							</li>
+							<li class="side-nav__item">
+								<a
+									href="javascript:void(0)"
+									class="side-nav__link"
+								>
+									<i
+										class="fal fa-camera-retro side-nav__icon"
+									></i>
+									<span class="side-nav__heading">
+										Thiết lập sản phẩm
+									</span>
+								</a>
+							</li>
+						</ul>
+						<div class="legal">
+							&copy; 2021 by hhaai. All rights reserved.
+						</div>
+					</nav>
 
-								<ul class="product-type">
-									<li class="product-type__item">
-										<span class="product-type__name">
-											Loại 1
-										</span>
-										<span class="times-icon">
-											<i class="fal fa-times"></i>
-										</span>
-									</li>
+					<main class="main">
+						<section class="product">
+							<div class="product__heading">
+								<span
+									class="product__heading--item product__heading--item-active"
+									data-id="product"
+								>
+									<i class="fal fa-camera-retro"></i>
+									<span>Sản phẩm</span>
+								</span>
 
-									<li class="product-type__item">
-										<span class="product-type__name">
-											Loại 2
-										</span>
-										<span class="times-icon">
-											<i class="fal fa-times"></i>
-										</span>
-									</li>
-
-									<li class="product-type__item">
-										<span class="product-type__name">
-											Loại 3
-										</span>
-										<span class="times-icon">
-											<i class="fal fa-times"></i>
-										</span>
-									</li>
-								</ul>
+								<span
+									class="product__heading--item"
+									data-id="filter"
+								>
+									<i class="fal fa-filter"></i>
+									<span>Bộ lọc</span>
+								</span>
 							</div>
 
-							<div class="product-content-2">
-								<div class="heading-group">
-									<h3 class="heading-3">
-										Danh sách sản phẩm
-									</h3>
+							<div
+								class="product-content product--active"
+								id="product"
+							>
+								<div class="product-content-1">
+									<div class="heading-group">
+										<h3 class="heading-3">
+											Danh sách loại sản phẩm
+										</h3>
 
-									<span
-										class="plus-icon open-modal"
-										data-modal="product-modal"
-									>
-										<i class="fal fa-plus"></i>
-									</span>
-								</div>
-
-								<div class="table">
-									<div class="table-header">
-										<div class="table-heading__list">
-											<span class="table-heading__item">
-												STT
-											</span>
-											<span class="table-heading__item">
-												Tên sản phẩm
-											</span>
-											<span class="table-heading__item">
-												Giá (đ)
-											</span>
-											<span class="table-heading__item">
-												Loại sản phẩm
-											</span>
-											<span class="table-heading__item">
-												Ngày tạo
-											</span>
-											<span class="table-heading__item">
-												Hành động
-											</span>
-										</div>
-									</div>
-									<div class="table-body">
-										<div class="table-content__list">
-											<span class="table-content__item">
-												1
-											</span>
-											<span class="table-content__item">
-												<a
-													href="#0"
-													class="table-content__link"
-												>
-													Sản phẩm 1
-												</a>
-											</span>
-											<span class="table-content__item">
-												1.000.000
-											</span>
-											<span class="table-content__item">
-												Loại 1
-											</span>
-											<span class="table-content__item">
-												21/12/2021
-											</span>
-											<span class="table-content__item">
-												<span
-													class="times-icon times-icon-2"
-												>
-													<i class="fal fa-times"></i>
-												</span>
-											</span>
-										</div>
-
-										<div class="table-content__list">
-											<span class="table-content__item">
-												1
-											</span>
-											<span class="table-content__item">
-												<a
-													href="#0"
-													class="table-content__link"
-												>
-													Sản phẩm 1
-												</a>
-											</span>
-											<span class="table-content__item">
-												1.000.000
-											</span>
-											<span class="table-content__item">
-												Loại 1
-											</span>
-											<span class="table-content__item">
-												21/12/2021
-											</span>
-											<span class="table-content__item">
-												<span
-													class="times-icon times-icon-2"
-												>
-													<i class="fal fa-times"></i>
-												</span>
-											</span>
-										</div>
-
-										<div class="table-content__list">
-											<span class="table-content__item">
-												1
-											</span>
-											<span class="table-content__item">
-												<a
-													href="#0"
-													class="table-content__link"
-												>
-													Sản phẩm 1
-												</a>
-											</span>
-											<span class="table-content__item">
-												1.000.000
-											</span>
-											<span class="table-content__item">
-												Loại 1
-											</span>
-											<span class="table-content__item">
-												21/12/2021
-											</span>
-											<span class="table-content__item">
-												<span
-													class="times-icon times-icon-2"
-												>
-													<i class="fal fa-times"></i>
-												</span>
-											</span>
-										</div>
-									</div>
-								</div>
-
-								<div class="pagination">
-									<ul class="pagination__list">
-										<li
-											class="pagination__item pagination__item--active"
+										<span
+											class="plus-icon"
+											data-modal="add-modal"
 										>
-											<a
-												href="#"
-												class="pagination__link"
+											<i class="fal fa-plus"></i>
+										</span>
+									</div>
+
+									<ul class="product-type">
+										<li class="product-type__item">
+											<span
+												class="product-type__name"
+												data-modal="add-modal"
 											>
-												1
-											</a>
+												Loại 1
+											</span>
+											<span class="times-icon">
+												<i class="fal fa-times"></i>
+											</span>
 										</li>
-										<li class="pagination__item">
-											<a
-												href="#"
-												class="pagination__link"
+
+										<li class="product-type__item">
+											<span
+												class="product-type__name"
+												data-modal="add-modal"
 											>
-												2
-											</a>
+												Loại 2
+											</span>
+											<span class="times-icon">
+												<i class="fal fa-times"></i>
+											</span>
 										</li>
-										<li class="pagination__item">
-											<a
-												href="#"
-												class="pagination__link"
+
+										<li class="product-type__item">
+											<span
+												class="product-type__name"
+												data-modal="add-modal"
 											>
-												3
-											</a>
-										</li>
-										<li class="pagination__item">
-											<a
-												href="#"
-												class="pagination__link"
-											>
-												4
-											</a>
+												Loại 3
+											</span>
+											<span class="times-icon">
+												<i class="fal fa-times"></i>
+											</span>
 										</li>
 									</ul>
 								</div>
+
+								<div class="product-content-2">
+									<div class="heading-group">
+										<h3 class="heading-3">
+											Danh sách sản phẩm
+										</h3>
+
+										<span
+											class="plus-icon"
+											data-modal="product-modal"
+										>
+											<i class="fal fa-plus"></i>
+										</span>
+									</div>
+
+									<div class="table">
+										<div class="table-header">
+											<div class="table-heading__list">
+												<span
+													class="table-heading__item"
+												>
+													STT
+												</span>
+												<span
+													class="table-heading__item"
+												>
+													Tên sản phẩm
+												</span>
+												<span
+													class="table-heading__item"
+												>
+													Giá (đ)
+												</span>
+												<span
+													class="table-heading__item"
+												>
+													Loại sản phẩm
+												</span>
+												<span
+													class="table-heading__item"
+												>
+													Ngày tạo
+												</span>
+												<span
+													class="table-heading__item"
+												>
+													Hành động
+												</span>
+											</div>
+										</div>
+										<div class="table-body">
+											<div class="table-content__list">
+												<span
+													class="table-content__item"
+												>
+													1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<a
+														href="#0"
+														class="table-content__link"
+														data-modal="product-modal"
+													>
+														Sản phẩm 1
+													</a>
+												</span>
+												<span
+													class="table-content__item"
+												>
+													1.000.000
+												</span>
+												<span
+													class="table-content__item"
+												>
+													Loại 1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													21/12/2021
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<span
+														class="times-icon times-icon-2"
+													>
+														<i
+															class="fal fa-times"
+														></i>
+													</span>
+												</span>
+											</div>
+
+											<div class="table-content__list">
+												<span
+													class="table-content__item"
+												>
+													1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<a
+														href="#0"
+														class="table-content__link"
+														data-modal="product-modal"
+													>
+														Sản phẩm 1
+													</a>
+												</span>
+												<span
+													class="table-content__item"
+												>
+													1.000.000
+												</span>
+												<span
+													class="table-content__item"
+												>
+													Loại 1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													21/12/2021
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<span
+														class="times-icon times-icon-2"
+													>
+														<i
+															class="fal fa-times"
+														></i>
+													</span>
+												</span>
+											</div>
+
+											<div class="table-content__list">
+												<span
+													class="table-content__item"
+												>
+													1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<a
+														href="#0"
+														class="table-content__link"
+														data-modal="product-modal"
+													>
+														Sản phẩm 1
+													</a>
+												</span>
+												<span
+													class="table-content__item"
+												>
+													1.000.000
+												</span>
+												<span
+													class="table-content__item"
+												>
+													Loại 1
+												</span>
+												<span
+													class="table-content__item"
+												>
+													21/12/2021
+												</span>
+												<span
+													class="table-content__item"
+												>
+													<span
+														class="times-icon times-icon-2"
+													>
+														<i
+															class="fal fa-times"
+														></i>
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+
+									<div class="pagination">
+										<ul class="pagination__list">
+											<li
+												class="pagination__item pagination__item--active"
+											>
+												<a
+													href="#"
+													class="pagination__link"
+												>
+													1
+												</a>
+											</li>
+											<li class="pagination__item">
+												<a
+													href="#"
+													class="pagination__link"
+												>
+													2
+												</a>
+											</li>
+											<li class="pagination__item">
+												<a
+													href="#"
+													class="pagination__link"
+												>
+													3
+												</a>
+											</li>
+											<li class="pagination__item">
+												<a
+													href="#"
+													class="pagination__link"
+												>
+													4
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
+						</section>
+					</main>
+				</div>
+			</div>
+
+			<div class="login">
+				<div class="login-left">
+					<div class="login__heading">
+						<img
+							src="./images/logo.jpg"
+							alt="logo"
+							class="login__img"
+						/>
+					</div>
+					<form action="" class="login-form">
+						<div class="login-form__group">
+							<label for="email" class="login-form__label">
+								Email
+							</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								class="login-form__input"
+								placeholder="Enter your email"
+							/>
 						</div>
-					</section>
-				</main>
+
+						<div class="login-form__group">
+							<label for="password" class="login-form__label">
+								Password
+							</label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								class="login-form__input"
+								placeholder="Password"
+							/>
+						</div>
+
+						<button class="btn btn-login" type="button">
+							Log in
+						</button>
+					</form>
+				</div>
+				<div class="login-right">
+					<div class="quotes-box quotes-box-1">
+						<p class="quotes__parag">
+							<i
+								class="fad fa-quote-left quotes__icon quotes__icon-1"
+							></i>
+							Photography is the story I fail to put into words.
+							<i
+								class="fad fa-quote-right quotes__icon quotes__icon-2"
+							></i>
+						</p>
+						<h4 class="quotes__author">Destin Sparks</h4>
+					</div>
+
+					<div class="quotes-box quotes-box-2">
+						<p class="quotes__parag">
+							<i
+								class="fad fa-quote-left quotes__icon quotes__icon-1"
+							></i>
+							Essentially what photography is is life lit up
+							<i
+								class="fad fa-quote-right quotes__icon quotes__icon-2"
+							></i>
+						</p>
+						<h4 class="quotes__author">Sam Abell</h4>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="loading-container">
+			<div class="loading">
+				<div class="loading-icon">
+					<img src="./images/camera.png" alt="loading icons" />
+				</div>
 			</div>
 		</div>
 
 		<div class="modal hide">
 			<div class="add-modal hide" id="add-modal">
-				<span class="times-icon close-modal">
+				<span class="times-icon close-modal" data-modal="add-modal">
 					<i class="fal fa-times"></i>
 				</span>
 
@@ -443,7 +496,7 @@
 			</div>
 
 			<div class="add-product-modal hide" id="product-modal">
-				<span class="times-icon close-modal">
+				<span class="times-icon close-modal" data-modal="product-modal">
 					<i class="fal fa-times"></i>
 				</span>
 
@@ -514,12 +567,26 @@
 					<div class="file-placeholder"></div>
 
 					<div class="btn-group">
-						<button class="btn btn-cancel">Hủy</button>
+						<button
+							type="button"
+							class="btn btn-cancel"
+							data-modal="product-modal"
+						>
+							Hủy
+						</button>
 						<button class="btn btn-add">Thêm</button>
 					</div>
 				</form>
 			</div>
+
+			<div class="msg-modal">
+				<h5 class="heading-5">Thông báo</h5>
+				<div class="msg-modal__content">
+					Lorem ipsum dolor sit amet consectetur. Consequatur!
+				</div>
+				<button class="btn btn-success">Xác nhận</button>
+			</div>
 		</div>
-		<script src="./js/main.js"></script>
 	</body>
+	<!-- <script src="./js/main.js"></script> -->
 </html>

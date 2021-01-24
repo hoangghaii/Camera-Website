@@ -158,6 +158,17 @@ body {
 	margin-bottom: 3rem;
 }
 
+.heading-5 {
+	@extend %heading;
+
+	font-size: 1.6rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $color-grey-dark-2;
+
+	margin-bottom: 1.5rem;
+}
+
 .heading-group {
 	display: flex;
 	justify-content: space-between;
