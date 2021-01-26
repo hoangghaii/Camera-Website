@@ -1,24 +1,18 @@
 /* ================ Typography =============== */
 
-//  Lato  //
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-//  Montserrat  //
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-//  Open Sans  //
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
-//  Raleway  //
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
+// ---------------- Sans-Serif ---------------- //
 //  Poppins  //
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-$font-lato: "Lato", sans-serif;
-$font-montserrat: "Montserrat", sans-serif;
-$font-opensans: "Open Sans", sans-serif;
-$font-raleway: "Raleway", sans-serif;
-$font-poppins: "Poppins", sans-serif;
+// ------------------ Serif ------------------ //
+// Source Serif Pro //
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap");
+
+$poppins: "Poppins", sans-serif;
+$sourceSerif: "Source Serif Pro", serif;
 
 body {
-	font-family: $font-poppins;
+	font-family: $poppins;
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -27,7 +21,7 @@ body {
 }
 
 %heading {
-	font-family: $font-raleway;
+	font-family: $sourceSerif;
 	color: $color-heading;
 }
 
