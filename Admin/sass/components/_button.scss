@@ -45,7 +45,7 @@
 	&-add {
 		padding: 1.3rem 6rem;
 		color: $color-white;
-		background-color: $color-primary;
+		background-color: $admin-color-primary;
 
 		margin-top: 1rem;
 	}
@@ -71,7 +71,7 @@
 	}
 
 	&-success {
-		background-color: $color-primary;
+		background-color: $admin-color-primary;
 		color: $color-white;
 		font-size: 1.6rem;
 		font-weight: 600;
@@ -87,5 +87,23 @@
 		border-radius: 1rem;
 
 		margin: 3rem 0 0;
+	}
+
+	&-pdf {
+		padding: 1.2rem 3rem;
+		background-color: $color-grey-light-3;
+		font-weight: 500;
+		color: $color-font;
+
+		transition: all 0.25s;
+
+		&:hover {
+			background-color: $customer-color-primary;
+			color: $color-white;
+		}
+	}
+
+	&-accessories {
+		margin-left: auto;
 	}
 }

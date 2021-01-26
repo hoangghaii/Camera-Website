@@ -2,12 +2,29 @@
 .side-nav {
 	margin-top: 2.5rem;
 
+	@include respond(tablet) {
+		display: flex;
+		justify-content: space-evenly;
+
+		margin-top: 0.7rem;
+		margin-bottom: 0.7rem;
+	}
+
 	&__item {
 		position: relative;
 		z-index: 1;
+
 		&:not(:last-child) {
 			margin-bottom: 0.5rem;
 		}
+
+		@include respond(tablet) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: 2rem;
+			}
+		}
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -16,7 +33,7 @@
 			display: block;
 			height: 100%;
 			width: 3px;
-			background-color: $color-primary;
+			background-color: $admin-color-primary;
 			z-index: -1;
 			transform: scaleY(0);
 			transform-origin: center;
@@ -24,14 +41,17 @@
 				width 0.25s cubic-bezier(1, 0, 0, 1) 0.25s,
 				background-color 0.1s;
 		}
+
 		&:hover::before,
 		&--active::before {
 			width: 100%;
 			transform: scaleY(1);
 		}
+
 		&:active::before {
-			background-color: $color-primary-light;
+			background-color: $admin-color-primary-light;
 		}
+
 		// @media only screen and (max-width: $bp-medium) {
 		// 	flex: 1;
 		// 	&:not(:last-child) {
@@ -52,6 +72,7 @@
 		// 	}
 		// }
 	}
+
 	&__link:link,
 	&__link:visited {
 		color: $color-grey-light-1;
@@ -70,6 +91,7 @@
 		// 	padding: 1.5rem 0.5rem;
 		// }
 	}
+
 	&__icon {
 		width: 1.75rem;
 		height: 1.75rem;
@@ -97,7 +119,8 @@
 	color: $color-grey-light-4;
 	text-align: center;
 	padding: 2.5rem;
-	// @media only screen and (max-width: $bp-medium) {
-	// 	display: none;
-	// }
+
+	@include respond(tablet) {
+		display: none;
+	}
 }
