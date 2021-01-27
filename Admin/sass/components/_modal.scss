@@ -86,25 +86,110 @@
 	@extend %absCenter;
 	@extend %modal;
 
+	width: 80rem;
+
 	&__header {
+		display: flex;
+		align-items: center;
+
+		margin-bottom: 2rem;
 	}
 
 	&__heading {
+		margin-bottom: 0;
+		margin-right: 3.5rem;
+		font-size: 1.8rem;
+
+		color: rgba($customer-color-primary-dark, 0.7);
+
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -2.9rem;
+
+			display: inline-block;
+			height: 100%;
+			width: 3px;
+			background-color: rgba($customer-color-primary-dark, 0.5);
+		}
 	}
 
 	&__filter-choose {
+		font-size: 1.4rem;
+
+		padding: 0.5rem 2rem;
+		border: 2px solid rgba($customer-color-primary-dark, 0.5);
+		border-radius: 4rem;
+
+		i {
+			margin-left: 0.5rem;
+		}
 	}
 
 	&__filter {
-	}
+		display: flex;
+		flex-wrap: wrap;
 
-	&__filter-list {
-		&--heading {
+		&-list {
+			position: relative;
+			width: fit-content;
+			display: inline-block;
+
+			margin-bottom: 2.5rem;
+
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+
+			&--heading {
+				padding: 0.7rem 2rem;
+				border: 1px solid $customer-color-primary-dark;
+				border-radius: 1rem;
+				cursor: pointer;
+			}
 		}
 
 		&-item {
+			display: flex;
+			flex-wrap: wrap;
+
+			width: 75rem;
+			padding: 1.5rem 1.5rem 1.3rem;
+			background-color: $color-white;
+			border: 1px solid $customer-color-primary-dark;
+			border-radius: 1rem;
+
+			margin-top: 0.3rem;
+
+			opacity: 0;
+			visibility: hidden;
+
+			transition: all 0.25s;
+
+			position: absolute;
+			bottom: -8.8rem;
+
 			&--list {
+				cursor: pointer;
+				transition: all 0.25s;
+				margin-bottom: 0.2rem;
+
+				&:hover {
+					color: rgba($customer-color-primary-dark, 0.6);
+				}
+
+				&:not(:last-child) {
+					margin-right: 2rem;
+				}
 			}
+		}
+
+		&-list:hover &-item {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 
@@ -125,8 +210,8 @@
 		align-items: center;
 
 		&-img {
-			width: 8rem;
-			height: 8rem;
+			width: 6rem;
+			height: 6rem;
 
 			img {
 				height: 100%;
@@ -144,18 +229,18 @@
 		}
 
 		&-name {
-			font-size: 1.7rem;
+			font-size: 1.6rem;
 			font-weight: 500;
 		}
 
 		&-note {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			font-weight: 500;
 			color: $color-heading;
 		}
 
 		&-price {
-			font-size: 1.7rem;
+			font-size: 1.6rem;
 			font-weight: 600;
 			color: $admin-color-primary;
 
@@ -169,6 +254,11 @@
 				margin-right: 1rem;
 			}
 		}
+	}
+
+	&-btn {
+		margin-left: auto;
+		font-size: 1.4rem;
 	}
 }
 

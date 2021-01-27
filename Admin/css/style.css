@@ -1,5 +1,5 @@
 /* =============== Reset HTML ================ */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap");
 html {
   line-height: 1.15;
@@ -254,9 +254,9 @@ img {
 
 /* ================ Typography =============== */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
   color: #545d7a;
   scroll-behavior: smooth;
@@ -953,7 +953,7 @@ body {
 }
 .form__input {
   font-size: 1.6rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 1.1rem;
   border: 1px solid #ccc;
   width: 100%;
@@ -965,7 +965,7 @@ body {
 .form__area {
   width: 100%;
   font-size: 1.6rem;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border-radius: 1.1rem;
   border: 1px solid #ccc;
   padding: 1rem 1.5rem;
@@ -1315,6 +1315,89 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.configuration-modal {
+  width: 80rem;
+}
+.configuration-modal__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.configuration-modal__heading {
+  margin-bottom: 0;
+  margin-right: 3.5rem;
+  font-size: 1.8rem;
+  color: rgba(33, 113, 203, 0.7);
+  position: relative;
+}
+.configuration-modal__heading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2.9rem;
+  display: inline-block;
+  height: 100%;
+  width: 3px;
+  background-color: rgba(33, 113, 203, 0.5);
+}
+.configuration-modal__filter-choose {
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid rgba(33, 113, 203, 0.5);
+  border-radius: 4rem;
+}
+.configuration-modal__filter-choose i {
+  margin-left: 0.5rem;
+}
+.configuration-modal__filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.configuration-modal__filter-list {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+.configuration-modal__filter-list:not(:last-child) {
+  margin-right: 2rem;
+}
+.configuration-modal__filter-list--heading {
+  padding: 0.7rem 2rem;
+  border: 1px solid #2171cb;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.configuration-modal__filter-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75rem;
+  padding: 1.5rem 1.5rem 1.3rem;
+  background-color: #fff;
+  border: 1px solid #2171cb;
+  border-radius: 1rem;
+  margin-top: 0.3rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s;
+  position: absolute;
+  bottom: -8.8rem;
+}
+.configuration-modal__filter-item--list {
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-bottom: 0.2rem;
+}
+.configuration-modal__filter-item--list:hover {
+  color: rgba(33, 113, 203, 0.6);
+}
+.configuration-modal__filter-item--list:not(:last-child) {
+  margin-right: 2rem;
+}
+.configuration-modal__filter-list:hover .configuration-modal__filter-item {
+  opacity: 1;
+  visibility: visible;
+}
 .configuration-modal-group {
   display: flex;
   align-items: center;
@@ -1329,8 +1412,8 @@ body {
   align-items: center;
 }
 .configuration-modal__product-img {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
 }
 .configuration-modal__product-img img {
   height: 100%;
@@ -1343,16 +1426,16 @@ body {
   margin-left: 1rem;
 }
 .configuration-modal__product-name {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 .configuration-modal__product-note {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #928b8b;
 }
 .configuration-modal__product-price {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #eb2f64;
   margin-right: 3rem;
@@ -1366,6 +1449,10 @@ body {
   .configuration-modal__product-price {
     margin-right: 1rem;
   }
+}
+.configuration-modal-btn {
+  margin-left: auto;
+  font-size: 1.4rem;
 }
 
 .close-modal {

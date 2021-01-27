@@ -1,19 +1,19 @@
 /* ================ Typography =============== */
 
-//  Poppins  //
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+//  Montserrat  //
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 // ------------------ Serif ------------------ //
 // Source Serif Pro //
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap");
 
-$poppins: "Poppins", sans-serif;
+$poppins: "Montserrat", sans-serif;
 $sourceSerif: "Source Serif Pro", serif;
 
 body {
 	font-family: $poppins;
 	font-size: 1.6rem;
-	font-weight: 400;
+	font-weight: 500;
 	line-height: 1.5;
 	color: $color-font;
 	scroll-behavior: smooth;
