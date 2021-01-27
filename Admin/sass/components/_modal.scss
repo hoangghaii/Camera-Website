@@ -82,6 +82,96 @@
 	}
 }
 
+.configuration-modal {
+	@extend %absCenter;
+	@extend %modal;
+
+	&__header {
+	}
+
+	&__heading {
+	}
+
+	&__filter-choose {
+	}
+
+	&__filter {
+	}
+
+	&__filter-list {
+		&--heading {
+		}
+
+		&-item {
+			&--list {
+			}
+		}
+	}
+
+	&-group {
+		display: flex;
+
+		align-items: center;
+	}
+
+	&__product-list {
+		padding-top: 2rem;
+		border-top: 1px solid rgba($color-grey-light-4, 0.5);
+	}
+
+	&__product {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-img {
+			width: 8rem;
+			height: 8rem;
+
+			img {
+				height: 100%;
+			}
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+
+			text-align: left;
+
+			margin-left: 1rem;
+		}
+
+		&-name {
+			font-size: 1.7rem;
+			font-weight: 500;
+		}
+
+		&-note {
+			font-size: 1.5rem;
+			font-weight: 500;
+			color: $color-heading;
+		}
+
+		&-price {
+			font-size: 1.7rem;
+			font-weight: 600;
+			color: $admin-color-primary;
+
+			margin-right: 3rem;
+
+			@include respond(only-tablet) {
+				margin-right: 2rem;
+			}
+
+			@include respond(land-phone) {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
 .close-modal {
 	position: absolute;
 	top: 1rem;

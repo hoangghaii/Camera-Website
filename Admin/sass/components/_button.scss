@@ -106,4 +106,27 @@
 	&-accessories {
 		margin-left: auto;
 	}
+
+	&-choose {
+		padding: 1.2rem 4rem;
+
+		color: $color-white;
+		background: linear-gradient(
+			to right,
+			$customer-color-primary,
+			$customer-color-primary-light
+		);
+	}
+
+	&-edit {
+		padding: 1.2rem 4rem;
+		min-width: 12.5rem;
+
+		color: $color-white;
+		background: linear-gradient(
+			to right,
+			$color-grey-light-4,
+			rgba($color-blue, 0.7)
+		);
+	}
 }
